@@ -8,8 +8,9 @@ metadata:
 spec:
   project: operators
   source:
-    repoURL: https://github.com/knative/operator/releases/download/knative-v1.8.0
-    path: operator.yaml
+    directory:
+      include:
+        - https://github.com/knative/operator/releases/download/knative-v1.8.0/operator.yaml
   destination:
     namespace: knative-operator
     server: https://kubernetes.default.svc
